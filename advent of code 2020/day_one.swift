@@ -57,23 +57,21 @@ func dayOnePartTwo() -> Int {
 func parsedDayOneInput() -> Array<Int> {
     var arr: Array<Int> = Array()
     let file = "day_one.txt"
-    var result = ""
+    var contents = ""
     
     if let dir = FileManager.default.urls(for: .downloadsDirectory, in: .userDomainMask).first {
         let fileURL = dir.appendingPathComponent(file)
         do {
-            result = try String(contentsOf: fileURL, encoding: .utf8)
-            let resultsArr = result.split(separator: "\n")
-            for str in resultsArr {
+            contents = try String(contentsOf: fileURL, encoding: .utf8)
+            let lines = contents.split(separator: "\n")
+            for str in lines {
                 let num = Int(str)
                 arr.append(num!)
             }
-            //print(arr)
         }
         catch {
             print("err")
         }
-
     }
     
     return arr
