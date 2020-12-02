@@ -7,7 +7,7 @@
 
 import Foundation
 
-func dayOne() -> Int {
+func dayOnePartOne() -> Int {
     let nums = parsedDayOneInput()
     let target = 2020
     
@@ -15,17 +15,43 @@ func dayOne() -> Int {
     var dict = [Int:Int]()
     
     for i in 0 ..< nums.count {
-        let rem = target - nums[i]
+        let comp = target - nums[i]
         
-        if dict.keys.contains(rem) && dict[rem]! != i {
-            print("\(nums[i]), \(rem)")
-            ret = nums[i] * rem;
+        if dict.keys.contains(comp) && dict[comp]! != i {
+            //print("\(nums[i]), \(rem)")
+            ret = nums[i] * comp;
             break;
         }
         dict[nums[i]] = i
     }
     
     return ret
+}
+
+func dayOnePartTwo() -> Int {
+    var nums = parsedDayOneInput()
+    let target = 2020
+    
+    //var dict = [Int:Int]()
+    nums.sort {
+        $0 < $1
+    }
+    for i in 0 ..< nums.count {
+        var left = i + 1
+        var right = nums.count - 1
+        
+        while left < right {
+            if nums[i] + nums[left] + nums[right] == target {
+                return nums[i] * nums[left] * nums[right]
+            } else if (nums[i] + nums[left] + nums[right] < target) {
+                left += 1;
+            } else {// A[i] + A[l] + A[r] > sum
+                right -= 1;
+            }
+        }
+    }
+    
+    return 0
 }
 
 func parsedDayOneInput() -> Array<Int> {

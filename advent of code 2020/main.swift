@@ -7,4 +7,6 @@
 
 import Foundation
 
-print(dayOne())
+//print(dayOnePartOne())
+
+print(dayOnePartTwo())
