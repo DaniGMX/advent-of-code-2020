@@ -45,7 +45,7 @@ func dayOnePartTwo() -> Int {
                 return nums[i] * nums[left] * nums[right]
             } else if (nums[i] + nums[left] + nums[right] < target) {
                 left += 1;
-            } else {// A[i] + A[l] + A[r] > sum
+            } else {
                 right -= 1;
             }
         }
