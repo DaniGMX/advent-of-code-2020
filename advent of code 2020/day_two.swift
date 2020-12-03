@@ -45,9 +45,6 @@ func dayTwoPartTwo() -> Int {
         
         if ((charAtFirstNum == password.char && charAtSecondNum != password.char) ||
             (charAtFirstNum != password.char && charAtSecondNum == password.char)) {
-            print(password)
-            print("Char at \(password.firstNum) is \(charAtFirstNum)")
-            print("Char at \(password.secondNum) is \(charAtSecondNum)")
             count += 1
         }
     }
