@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
+/*
 print("\nDay 1 Solutions!")
 print(dayOnePartOne())
 print(dayOnePartTwo())
@@ -18,3 +18,8 @@ print(dayTwoPartTwo())
 print("\nDay 3 Solutions!")
 print(dayThreePartOne(step: [1, 3]))
 print(dayThreePartTwo())
+*/
+print("\nDay 4 Solutions!")
+print(dayFourPartOne())
+print(dayFourPartTwo())
+
