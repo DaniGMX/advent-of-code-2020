@@ -34,19 +34,19 @@ func dayFourPartTwo() -> Int {
             case "byr":
                 let birthYear: Int = Int(passport[requiredField]!)!
                 if (1920 ... 2002 ~= birthYear) {
-                    print("\(requiredField) : \(birthYear)")
+                    //print("\(requiredField) : \(birthYear)")
                     validCount += 1
                 }
             case "iyr":
                 let issueYear: Int = Int(passport[requiredField]!)!
                 if (2010 ... 2020 ~= issueYear) {
-                    print("\(requiredField) : \(issueYear)")
+                    //print("\(requiredField) : \(issueYear)")
                     validCount += 1
                 }
             case "eyr":
                 let expirationYear: Int = Int(passport[requiredField]!)!
                 if (2020 ... 2030 ~= expirationYear) {
-                    print("\(requiredField) : \(expirationYear)")
+                    //print("\(requiredField) : \(expirationYear)")
                     validCount += 1
                 }
             case "hgt":
@@ -56,7 +56,7 @@ func dayFourPartTwo() -> Int {
                 let cmOk: Bool = units == "cm" && 150 ... 193 ~= size
                 let inOk: Bool = units == "in" && 59 ... 76 ~= size
                 if (cmOk || inOk) {
-                    print("\(requiredField) : \(rawHeight)")
+                    //print("\(requiredField) : \(rawHeight)")
                     validCount += 1
                 }
             case "hcl":
@@ -71,7 +71,7 @@ func dayFourPartTwo() -> Int {
                         }
                     }
                     if (validCharCount == 6) {
-                        print("\(requiredField) : \(hexHairColor)")
+                        //print("\(requiredField) : \(hexHairColor)")
                         validCount += 1
                     }
                 }
@@ -79,13 +79,13 @@ func dayFourPartTwo() -> Int {
                 let eyeColor: String = passport[requiredField]!
                 let validEyeColors: [String] = ["amb", "blu", "brn", "gry", "grn", "hzl", "oth"]
                 if (validEyeColors.contains(eyeColor)) {
-                    print("\(requiredField) : \(eyeColor)")
+                    //print("\(requiredField) : \(eyeColor)")
                     validCount += 1
                 }
             case "pid":
                 let rawPasswordID: String = passport[requiredField]!
                 if (rawPasswordID.count == 9) {
-                    print("\(requiredField) : \(rawPasswordID)")
+                    //print("\(requiredField) : \(rawPasswordID)")
                     validCount += 1
                 }
             default:
@@ -94,9 +94,9 @@ func dayFourPartTwo() -> Int {
         }
         if (validCount == 7) {
             validPassportCount += 1
-            print("Valid! Currently \(validPassportCount) valid passports")
+            //print("Valid! Currently \(validPassportCount) valid passports")
         }
-        print("\n")
+        //print("\n")
     }
     return validPassportCount
 }

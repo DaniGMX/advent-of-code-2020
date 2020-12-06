@@ -18,8 +18,11 @@ print(dayTwoPartTwo())
 print("\nDay 3 Solutions!")
 print(dayThreePartOne(step: [1, 3]))
 print(dayThreePartTwo())
-*/
+
 print("\nDay 4 Solutions!")
 print(dayFourPartOne())
 print(dayFourPartTwo())
-
+*/
+print("\nDay 5 Solutions!")
+print(dayFivePartOne())
+print(dayFivePartTwo())
